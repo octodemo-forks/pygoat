@@ -1,21 +1,11 @@
 # PyGoat
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 intentionally vuln web Application Security in django.
 our roadmap build intentionally vuln web Application in django. The Vulnerability can based on OWASP top ten
 <br>
-• A1:2017-Injection<br>
-• A2:2017-Broken Authentication<br>
-• A3:2017-Sensitive Data Exposure<br>
-• A4:2017-XML External Entities (XXE)<br>
-• A5:2017-Broken Access Control<br>
-• A6:2017-Security Misconfiguration<br>
-• A7:2017-Cross-Site Scripting (XSS)<br>
-• A8:2017-Insecure Deserialization<br>
-• A9:2017-Using Components with Known Vulnerabilities<br>
-• A10:2017-Insufficient Logging & Monitoring<br>
 
 Table of Contents
 =================
@@ -25,43 +15,87 @@ Table of Contents
       * [From Sources](#from-sources)
       * [Docker Container](#docker-container)
       * [Installation Video](#installation-video)
-   * [Solutions](#solutions)
+   * [Uninstallation](#uninstallation)
+   * [Solutions](/Solutions/solution.md)
+   * [For Developers](/docs/dev_guide.md)
 
 ## Installation
 
 ### From Sources
+
 To setup the project on your local machine:
 <br>
-    1. Click on Fork.<br>
-    2. Go to your fork and clone the project to your local machine.<br>
-    3. Install the requirements `pip install -r requirements.txt`.<br>
-    4. Apply the migrations `python3 manage.py migrate`.<br>
-    5. Finally, run the development server `python3 manage.py runserver`.<br>
-    
 
-The project will be available at 127.0.0.1:8000.
+First, Clone the repository using GitHub website or git in Terminal
+```
+  git clone https://github.com/adeyosemanputra/pygoat.git
+  ### To Download a specific branch
+  git clone -b <branch_name> https://github.com/adeyosemanputra/pygoat.git
+```
+
+#### Method 1
+
+1. Install all app and python requirements using installer file - `bash installer.sh`
+2. Apply the migrations `python3 manage.py migrate`.<br>
+3. Finally, run the development server `python3 manage.py runserver`.<br>
+4. The project will be available at <http://127.0.0.1:8000> 
+
+#### Method 2
+
+1. Install python3 requirements `pip install -r requirements.txt`.<br> 
+2. Apply the migrations `python3 manage.py migrate`.<br>
+3. Finally, run the development server `python3 manage.py runserver`.<br>
+4. The project will be available at <http://127.0.0.1:8000> 
+
+#### Method 3
+
+1. Install all app and python requirements using `setup.py` file - `pip3 install .`
+2. Apply the migrations `python3 manage.py migrate`.<br>
+3. Finally, run the development server `python3 manage.py runserver`.<br>
+4. The project will be available at <http://127.0.0.1:8000> 
 
 ### Docker Container
 1. Install [Docker](https://www.docker.com)
-2. Run `docker pull pygoat/pygoat`
-3. Run `docker run --rm -p 8000:8000 pygoat/pygoat` or `docker run pygoat/pygoat`
+2. Run `docker pull pygoat/pygoat` or `docker pull pygoat/pygoat:latest`
+3. Run `docker run --rm -p 8000:8000 pygoat/pygoat:latest`
 4. Browse to <http://127.0.0.1:8000> 
+5. Remove existing image using `docker image rm pygoat/pygoat` and pull again incase of any error
 
-### Installation Video
-[![](http://img.youtube.com/vi/rfzQiMeiwso/0.jpg)](http://www.youtube.com/watch?v=rfzQiMeiwso "Installation Pygoat")
+### From Docker-Compose 
+1. Install [Docker](https://www.docker.com)
+2. Run `docker-compose up` or `docker-compose up -d`
+
+### Build Docker Image and Run
+1. Clone the repository  &ensp; `git clone https://github.com/adeyosemanputra/pygoat.git` 
+2. Build the docker image from Dockerfile using &ensp; `docker build -f Dockerfile -t pygoat .`
+3. Run the docker image &ensp;`docker run --rm -p 8000:8000 pygoat:latest`
+4. Browse to <http://127.0.0.1:8000> or <http://0.0.0.0:8000> 
+
+### Installation video 
+
+1. From Source using `installer.sh`
+ - [Installing PyGoat from Source](https://www.youtube.com/watch?v=7bYBJXG3FRQ)
+2. Without using `installer.sh`
+ - [![](http://img.youtube.com/vi/rfzQiMeiwso/0.jpg)](http://www.youtube.com/watch?v=rfzQiMeiwso "Installation Pygoat")
+
+## Uninstallation
+
+### On Debian/Ubuntu Based Systems
+- On Debian/Ubuntu based systems, you can use the `uninstaller.sh` script to uninstall `pygoat` along with all it's dependencies.
+- To uninstall `pygoat`, simply run:
+```bash
+$ bash ./uninstaller.sh
+```
+
+### On Other Systems
+- On other systems, you can use the `uninstaller.py` script to uninstall `pygoat` along with all it's dependencies
+- To uninstall `pygoat`, simply run:
+```bash
+$ python3 uninstaller.py
+```
 
 ## Solutions 
-<a href="/pygoat/Solutions/solution.md">Challenge solutions</a> •
-</p>    
-
-## Live Demo
-http://pygoat-web.herokuapp.com <br>
-http://pygoat.herokuapp.com <br>
-http://pygoat-dep.herokuapp.com <br>
-credential:<br>
-username : user<br>
-password : user12345<br>
-or you could login with 0auth (google) <br>
+<a href="/Solutions/solution.md">Solutions to all challenges</a>
 
 ## Contributors ✨
 
@@ -77,6 +111,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/adeyosemanputra"><img src="https://avatars.githubusercontent.com/u/24958168?v=4?s=100" width="100px;" alt=""/><br /><sub><b>adeyosemanputra</b></sub></a><br /><a href="https://github.com/adeyosemanputra/pygoat/commits?author=adeyosemanputra" title="Code">💻</a> <a href="https://github.com/adeyosemanputra/pygoat/commits?author=adeyosemanputra" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/gaurav618618"><img src="https://avatars.githubusercontent.com/u/29380890?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gaurav618618</b></sub></a><br /><a href="https://github.com/adeyosemanputra/pygoat/commits?author=gaurav618618" title="Code">💻</a> <a href="https://github.com/adeyosemanputra/pygoat/commits?author=gaurav618618" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/kUSHAL0601"><img src="https://avatars.githubusercontent.com/u/29600964?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MajAK</b></sub></a><br /><a href="https://github.com/adeyosemanputra/pygoat/commits?author=kUSHAL0601" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/JustinDPerkins"><img src="https://avatars.githubusercontent.com/u/60413733?v=4?s=100" width="100px;" alt=""/><br /><sub><b>JustinPerkins</b></sub></a><br /><a href="https://github.com/adeyosemanputra/pygoat/commits?author=JustinDPerkins" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Hkakashi"><img src="https://avatars.githubusercontent.com/u/43193113?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Liu Peng</b></sub></a><br /><a href="https://github.com/adeyosemanputra/pygoat/commits?author=Hkakashi" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/RupakBiswas-2304"><img src="https://avatars.githubusercontent.com/u/75058161?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Metaphor</b></sub></a><br /><a href="https://github.com/adeyosemanputra/pygoat/commits?author=RupakBiswas-2304" title="Code">💻</a></td>
+    <td align="center"><a href="https://whokilleddb.github.io"><img src="https://avatars.githubusercontent.com/u/56482137?v=4?s=100" width="100px;" alt=""/><br /><sub><b>whokilleddb</b></sub></a><br /><a href="https://github.com/adeyosemanputra/pygoat/commits?author=whokilleddb" title="Code">💻</a></td>
   </tr>
 </table>
 

@@ -51,6 +51,42 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "JustinDPerkins",
+      "name": "JustinPerkins",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60413733?v=4",
+      "profile": "https://github.com/JustinDPerkins",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Hkakashi",
+      "name": "Liu Peng",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43193113?v=4",
+      "profile": "https://github.com/Hkakashi",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "RupakBiswas-2304",
+      "name": "Metaphor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75058161?v=4",
+      "profile": "https://github.com/RupakBiswas-2304",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "whokilleddb",
+      "name": "whokilleddb",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56482137?v=4",
+      "profile": "https://whokilleddb.github.io",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
