@@ -19,4 +19,4 @@ jobs:
         uses: advanced-security/python-lint-code-scanning-action@main
         with:
           linter: ${{ matrix.linter }}
-          ruff-version: "0.0.257"
+          ruff-version: "0.0.292"
