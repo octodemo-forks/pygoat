@@ -16,6 +16,6 @@ jobs:
         linter: [flake8, pylint, ruff, mypy, pytype, pyright, fixit]
     steps:
       - name: Run Python Lint
-        uses: aegilops/python-lint-code-scanning-action@main
+        uses: advanced-security/python-lint-code-scanning-action@main
         with:
           linter: ${{ matrix.linter }}
